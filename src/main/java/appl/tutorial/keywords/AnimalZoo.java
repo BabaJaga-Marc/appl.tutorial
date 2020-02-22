@@ -5,9 +5,9 @@ public class AnimalZoo {
 	public static void main(String[] args) {
 		Object xxx = new Animal("tiger");
 		if (xxx instanceof Animal) {
-			System.out.println("xxx is an animal");
+			System.out.println("tiger is an animal");
 		} else {
-			System.out.println("xxx is not an animal");
+			System.out.println("tiger is not an animal");
 		}
 
 	}

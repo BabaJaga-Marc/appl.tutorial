@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 public class SchoolFactory {
 
 	public static void main(String[] args) {
-		School whg = new School("WHG", 12);
+		School whg = new School("WHG");
 
 		String[] letters = { "A", "B", "C", "D" };
 		int[] years = { 5, 6, 7, 8, 9, 10, 11, 12 };
@@ -29,8 +29,14 @@ public class SchoolFactory {
 			System.out.println(schoolclass.getClassname());
 			List<Pupil> pupils = schoolclass.getPupils();
 			for (Pupil pupil : pupils) {
-				System.out.println(" - " + pupil.getName() + ", " + pupil.getAge());
+				// System.out.println(" - " + pupil.getName() + ", " + pupil.getAge());
 			}
+		}
+
+		Schoolclass class10B = whg.getSchoolclass("10B");
+		List<Pupil> pupils = class10B.getPupils();
+		for (Pupil pupil : pupils) {
+			System.out.println(" - " + pupil.getName() + ", " + pupil.getAge());
 		}
 	}
 
